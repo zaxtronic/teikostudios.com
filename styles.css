@@ -1,0 +1,230 @@
+/* Importar fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;600;700&display=swap');
+
+:root {
+    --futuristic-blue: #00ffff; /* Cyan brillante */
+    --futuristic-pink: #ff00ff; /* Magenta brillante */
+    --futuristic-green: #00ff00; /* Verde lima brillante */
+    --dark-bg: #0a0a1a;         /* Azul muy oscuro casi negro */
+    --primary-glow: 0 0 5px var(--futuristic-blue), 0 0 10px var(--futuristic-blue), 0 0 15px var(--futuristic-blue);
+    --secondary-glow: 0 0 5px var(--futuristic-pink), 0 0 10px var(--futuristic-pink);
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background-color: var(--dark-bg);
+    color: #e0e0e0; /* Gris claro para texto */
+    padding-top: 56px; /* Ajuste para la navbar fija */
+}
+
+h1, h2, h3, h4, h5, h6, .logo-font {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--futuristic-blue); /* Títulos en cyan */
+    text-shadow: var(--primary-glow);
+}
+
+.text-glow {
+    text-shadow: var(--primary-glow);
+}
+
+/* --- Navbar --- */
+.futuristic-navbar {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro semi-transparente */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--futuristic-blue);
+    box-shadow: 0 2px 10px rgba(0, 255, 255, 0.3);
+}
+
+.futuristic-navbar .navbar-brand,
+.futuristic-navbar .nav-link {
+    color: var(--futuristic-blue);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.futuristic-navbar .nav-link:hover,
+.futuristic-navbar .nav-link.active {
+    color: #ffffff; /* Blanco al pasar el ratón o activo */
+    text-shadow: 0 0 8px #fff;
+}
+
+.navbar-toggler {
+    border-color: var(--futuristic-blue);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* --- Hero Section --- */
+#hero {
+    min-height: calc(100vh - 56px); /* Altura completa menos navbar */
+    background: linear-gradient(rgba(10, 10, 26, 0.8), rgba(10, 10, 26, 0.9)), url('https://via.placeholder.com/1920x1080/000022/00FFFF?text=Futuristic+Background') no-repeat center center/cover;
+    /* Reemplaza la URL de placeholder con una imagen de fondo futurista adecuada */
+    color: #fff;
+}
+
+#hero h1 {
+    font-size: calc(2.5rem + 2vw); /* Tamaño de fuente responsivo */
+}
+
+/* --- Botones Futuristas --- */
+.futuristic-btn {
+    background-color: var(--futuristic-blue);
+    border: 1px solid var(--futuristic-blue);
+    color: var(--dark-bg);
+    font-weight: bold;
+    padding: 10px 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px var(--futuristic-blue), inset 0 0 5px rgba(255,255,255,0.5);
+}
+
+.futuristic-btn:hover {
+    background-color: #fff;
+    color: var(--futuristic-blue);
+    border-color: #fff;
+    box-shadow: 0 0 15px var(--futuristic-blue), 0 0 25px var(--futuristic-blue);
+}
+
+.futuristic-btn-outline {
+    color: var(--futuristic-blue);
+    border-color: var(--futuristic-blue);
+    padding: 10px 25px;
+    transition: all 0.3s ease;
+}
+
+.futuristic-btn-outline:hover {
+    background-color: var(--futuristic-blue);
+    color: var(--dark-bg);
+    box-shadow: 0 0 10px var(--futuristic-blue);
+}
+
+/* --- Títulos de Sección --- */
+.section-title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 40px; /* Aumentado para más espacio */
+    color: var(--futuristic-blue); /* Color principal */
+}
+
+.section-title span {
+    display: block;
+    text-shadow: var(--primary-glow); /* Aplica el glow al texto */
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--futuristic-blue);
+    box-shadow: var(--primary-glow);
+}
+
+/* --- Sección About --- */
+#about p {
+    line-height: 1.7;
+}
+
+.futuristic-img-border {
+    border: 3px solid var(--futuristic-blue);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    padding: 5px;
+    background-color: var(--dark-bg);
+}
+
+.futuristic-badge {
+    background-color: var(--futuristic-pink);
+    color: #fff;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    box-shadow: 0 0 5px var(--futuristic-pink);
+}
+
+/* --- Sección Games (Cards) --- */
+#games {
+    background: linear-gradient(rgba(15, 15, 30, 0.95), rgba(10, 10, 20, 0.98));
+    border-top: 1px solid var(--futuristic-blue);
+    border-bottom: 1px solid var(--futuristic-blue);
+}
+
+.futuristic-card {
+    background-color: rgba(20, 20, 40, 0.8); /* Fondo de tarjeta ligeramente transparente */
+    border: 1px solid var(--futuristic-blue);
+    border-radius: 0; /* Bordes rectos */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #ccc; /* Texto ligeramente más oscuro dentro de las tarjetas */
+    display: flex; /* Asegura que flex funcione bien */
+    flex-direction: column; /* Apila contenido verticalmente */
+}
+
+.futuristic-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3), 0 0 15px var(--futuristic-blue);
+}
+
+.futuristic-card .card-title {
+    color: var(--futuristic-green); /* Títulos de juegos en verde */
+    text-shadow: 0 0 5px var(--futuristic-green);
+}
+
+.futuristic-card .card-img-top {
+    border-bottom: 1px solid var(--futuristic-blue);
+    border-radius: 0;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.futuristic-card:hover .card-img-top {
+    opacity: 1;
+}
+
+.futuristic-card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Hace que el body ocupe el espacio disponible */
+}
+
+.futuristic-card .card-text {
+    flex-grow: 1; /* Empuja los botones hacia abajo */
+}
+
+
+/* --- Sección Contacto --- */
+.futuristic-link {
+    color: var(--futuristic-pink);
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.futuristic-link:hover {
+    color: #fff;
+    text-shadow: var(--secondary-glow);
+}
+
+.social-icon i {
+    color: var(--futuristic-blue);
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.social-icon i:hover {
+    color: var(--futuristic-pink);
+    transform: scale(1.2);
+    text-shadow: var(--secondary-glow);
+}
+
+/* --- Footer --- */
+footer {
+    border-top: 1px solid var(--futuristic-blue);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
